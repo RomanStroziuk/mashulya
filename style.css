@@ -1,50 +1,58 @@
-body {
-  background: black;
-  color: #fff;
-  font-family: "Archivo Black", sans-serif;
-  font-size: 3em;
-  text-align: center;
-  scrollbar-width: none;
-}
 
-.heart {
-  fill: red;
-  position: relative;
-  top: 5px;
-  width: 50px;
-  animation: pulse 1s ease infinite;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
+  body {
+    background: black;
+    color: #fff;
+    font-family: "Arial", sans-serif; /* Змінено на простіший і привабливий шрифт */
+    font-size: 2em; /* Збільшено розмір шрифту */
+    text-align: center;
+    scrollbar-width: none;
+    margin: 0;
+    padding: 0;
   }
-  50% {
-    transform: scale(1.3);
+
+  .heart {
+    fill: red;
+    position: relative;
+    top: 5px;
+    width: 20px; /* Зменшено розмір сердечка */
+    height: 20px;
+    animation: pulse 1s ease infinite;
   }
-  100% {
-    transform: scale(1);
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2); /* Зменшено масштаб */
+    }
+    100% {
+      transform: scale(1);
+    }
   }
-}
 
-#heart {
-  position: relative;
-  width: 100px;
-  height: 90px;
-  text-align: center;
-  font-size: 16px;
-}
+  #heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px; /* Зменшено розмір серця */
+    height: 20px;
+    text-align: center;
+    font-size: 32px; /* Збільшено розмір шрифту */
+  }
 
-#heart span {
-  width: 100%;
-  display: block;
-  top: 50%;
-  z-index: 1;
-}
+  #heart span {
+    width: 100%;
+    display: block;
+    top: 50%;
+    z-index: 1;
+  }
 
-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1; /* Це дозволить анімації бути на фоні */
-}
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Це дозволить анімації бути на фоні */
+  }
+
